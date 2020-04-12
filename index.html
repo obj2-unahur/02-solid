@@ -1,69 +1,84 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-markdown>
-					<textarea data-template>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown>
+				<textarea data-template>
+						## Clase 02
 						## Programación con Objetos II
 						### UNAHUR
 					</textarea>
-				</section>		
-				<section data-markdown>
-					<textarea data-template>
-						## Clase 02
+			</section>
+			<section data-markdown>
+				<textarea data-template>
 						### Principios SOLID
 					</textarea>
-				</section>
+			</section>
+			<section>
 				<section data-markdown>
-					La programación orientada a objetos supuso la aparición de una nueva forma de diseñar aplicacione.
+					## Un poco de historia
 
-					Habilitó a los desarrolladores la posibilidad de combinar datos con el mismo propósito en una única clase de modo que la funcionalidad común quedaba encapsulada dentro de la aplicación a diferencia de lo que sucede con la programación funcional u otro tipo de paradigmas
-					
-					Sin embargo, esto no supuso el fin de aplicaciones con una arquitectura errónea o difíciles de mantener
+					* La programación orientada a objetos supuso la aparición de una nueva forma de diseñar aplicaciones
 
-					Con el fin de combatir esto, Robert C. Martin propuso 5 principios con el fin de facilitar a los desarrolladores la creación de aplicaciones fáciles de leer y, lo que es más importante, mantenibles a largo plazo
+					* Habilitó a los desarrolladores la posibilidad de combinar datos con el mismo propósito en una
+					única clase de modo que la funcionalidad común quedaba encapsulada dentro de la aplicación a
+					diferencia de lo que sucede con la programación funcional u otro tipo de paradigmas
 				</section>
-			</div>
+				<section>
+					## Un poco de historia
+
+					* Sin embargo, esto no supuso el fin de aplicaciones con una arquitectura errónea o difíciles de
+					mantener
+
+					* Con el fin de combatir esto, Robert C. Martin propuso 5 principios con el fin de facilitar a los
+					desarrolladores la creación de aplicaciones fáciles de leer y, lo que es más importante, mantenibles
+					a largo plazo
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			hash: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+	</script>
+</body>
+
 </html>
