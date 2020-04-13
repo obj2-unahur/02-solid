@@ -163,13 +163,13 @@
 					</p>
 					<p class="fragment fade-up">Continuamos con la clase Vehiculo ...</p>
 					<pre class=" fragment fade-up">
-						<code class="hljs" data-trim data-line-numbers="8-14">
+						<code class="hljs" data-trim >
 						class Vehiculo {
 							Vehiculo(identificador: string){ }
 							getIdentificadorVehiculo() { }
 						}	
 						</code>
-						</pre>
+					</pre>
 				</section>
 				<section>
 					<h5>OCP</h5>
@@ -177,22 +177,18 @@
 					<p class="fragment fade-up">... Agregamos el método ruedasVehiculos() ...</p>
 					<pre class=" fragment fade-up">
 						<code class="hljs" data-trim data-line-numbers="3|5|7">
-						static ruedasVehiculos(List<Vehiculo> vehiculos) {
-							for (Vehiculo vehiculo: vehiculos) {
-								if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
-									System.out.println("4");
-								} else if (vehiculo.getIdentificadorVehiculo().equals("bicicleta")) {
-									System.out.println("2");
-								} else if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
-									System.out.println("2");
-								}
+						int ruedasVehiculo() {
+							if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
+								return 4;
+							} else if (vehiculo.getIdentificadorVehiculo().equals("bicicleta")) {
+								return 2;
+							} else if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
+								return 2;
 							}
 						}
 						</code>
 					</pre>
-					<p class="fragment fade-up">... Violamos OCP?</p>
-					<p class="fragment fade-up">... SI?</p>
-					<p class="fragment fade-up">Si agregamos un tipo de vehiculo, tenemos que cambiar el método <i>ruedasVehiculos</i></p>
+					<p><span class="fragment fade-up">Violamos OCP?</span><span class="fragment fade-up">... SI!</span><span class="fragment fade-up">Si agregamos un tipo de vehiculo nuevo, tenemos que tocar el método ruedasVehiculo() </span></p>
 				</section>
 			</section>
 			<section>
