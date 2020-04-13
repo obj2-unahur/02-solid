@@ -142,6 +142,41 @@
 					<p class="fragment fade-up"><a href="http://cleancoder.com/products">Robert C. Martin</a> defendió en su <a href="">blog</a> este principio que a priori puede parecer una paradoja</p>
 					<p class="fragment fade-up">Es importante tener en cuenta este principio a la hora de desarrollar clases, librerías o frameworks</p>
 				</section>
+				<h5>SRP</h5>
+					</p>
+					<p class="fragment fade-up"">El siguiente código viola OCP ? ...</p>
+					<pre class="fragment fade-up"" ><code class="hljs" data-trim data-line-numbers="4|5">
+						class Vehiculo {
+							Vehiculo(identificador: string){ }
+							getIdentificadorVehiculo() { }
+						}	
+
+						static ruedasVehiculos(List<Vehiculo> vehiculos) {
+							for (Vehiculo vehiculo: vehiculos) {
+								if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
+									System.out.println("4");
+								} else if (vehiculo.getIdentificadorVehiculo().equals("bicicleta")) {
+									System.out.println("2");
+								} else if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
+									System.out.println("2");
+								}
+							}
+						}
+						
+						public static void main(String[] args) {
+							List<Vehiculo> vehiculos = new ArrayList<>();
+							vehiculos.add(new Vehiculo("automovil"));
+							vehiculos.add(new Vehiculo("bicileta"));
+							vehiculos.add(new Vehiculo("motocicleta"));
+
+							ruedasVehiculos(vehiculos);
+
+ 						}
+						</code>
+					</pre>
+					</p>
+					<p class="fragment fade-up">... SI!</p>
+					<p class="fragment fade-up">Si agregamos un tipo de vehiculo, tenemos que cambiar el método <i>ruedasVehiculos</i></p>
 			</section>
 			<section>
 				<section data-markdown>
