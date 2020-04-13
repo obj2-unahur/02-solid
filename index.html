@@ -174,21 +174,21 @@
 				<section>
 					<h5>OCP</h5>
 					</p>
-					<p class="fragment fade-up">... Agregamos el método ruedasVehiculos() ...</p>
+					<p class="fragment fade-up">Agregamos el método ruedasVehiculo() ...</p>
 					<pre class=" fragment fade-up">
 						<code class="hljs" data-trim data-line-numbers="3|5|7">
 						int ruedasVehiculo() {
-							if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
+							if (vehiculo.getIdentificadorVehiculo() == "automovil"))
 								return 4;
-							} else if (vehiculo.getIdentificadorVehiculo().equals("bicicleta")) {
+							else if (vehiculo.getIdentificadorVehiculo() == "bicicleta")
 								return 2;
-							} else if (vehiculo.getIdentificadorVehiculo().equals("automovil")) {
+							else if (vehiculo.getIdentificadorVehiculo() == "automovil")
 								return 2;
 							}
 						}
 						</code>
 					</pre>
-					<p><span class="fragment fade-up">Violamos OCP?</span><span class="fragment fade-up">... SI!</span><span class="fragment fade-up">Si agregamos un tipo de vehiculo nuevo, tenemos que tocar el método ruedasVehiculo() </span></p>
+					<p><span class="fragment fade-up">Violamos OCP?</span> <span class="fragment fade-up ">... SI!</span><span class="fragment fade-up"> ... porque si agregamos un tipo de vehiculo nuevo, tenemos que tocar el método ruedasVehiculo() </span></p>
 				</section>
 			</section>
 			<section>
