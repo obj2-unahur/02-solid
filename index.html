@@ -66,26 +66,41 @@
 				</section>
 				<section data-markdown>
 					## 	The **_S_**ingle Responsibility Principle (SRP)
+
+
 					* Una clase tiene que tener una sola razón para cambiar
-					* La razón para cambiar es precisamente la responsabilidad de está clase
-					* Este principio es el principal y mas importante
-					* Fácil de entender, difícil de poner en práctica
+					* Para eso necesita tener una sola responsabilidad
+					* Mas reponsabilidades nos generan acoplamientos
+				
 				</section>
 				<section data-markdown>
 					## 	The **_S_**ingle Responsibility Principle (SRP)
 
 
-					Cómo hacerlo ?
+					* Este principio es el principal y mas importante
+					* Fácil de entender, difícil de poner en práctica
+					* Este principio se puede aplicar no solo a Clases sino a microservicios
 
-					_"Reúne las cosas que cambian por las mismas razones y separa aquellas que cambian por razones diferentes"_
 				</section>
 				<section data-markdown>
 					## 	The **_S_**ingle Responsibility Principle (SRP)
 					
 
-					Cómo hacerlo según Uncle Bob Martin ?
+					Cómo lograrlo según Uncle Bob Martin ?
 
 					_"Reúne las cosas que cambian por las mismas razones y separa aquellas que cambian por razones diferentes"_
+				</section>
+				<section data-markdown>
+					## 	The **_S_**ingle Responsibility Principle (SRP)
+	
+					```java
+					class Vehiculo {
+						Vehiculo(identificador: string){ }
+						getIdentificadorVehiculo() { }
+						grabarVehiculo(v: Vehicle) { } 
+						obtenerVehiculo(identifier: string): Vehicle { }
+					}
+					```
 				</section>
 			</section>
 			<section>
