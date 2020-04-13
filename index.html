@@ -39,19 +39,25 @@
 				<section>
 					<h5> Un poco de historia ...</h5>
 
-					<p class="fragment fade-up">La programación orientada a objetos supuso la aparición de una nueva forma de diseñar aplicaciones</p>
+					<p class="fragment fade-up">La programación orientada a objetos supuso la aparición de una nueva
+						forma de diseñar aplicaciones</p>
 
-					<p class="fragment fade-up">Habilitó a los desarrolladores la posibilidad de combinar datos con el mismo propósito en una
+					<p class="fragment fade-up">Habilitó a los desarrolladores la posibilidad de combinar datos con el
+						mismo propósito en una
 						única clase de modo que la funcionalidad común quedaba encapsulada dentro de la aplicación a
 						diferencia de lo que sucede con la programación funcional u otro tipo de paradigmas</p>
 				</section>
 				<section>
 					<h5> Un poco de historia ...</h5>
 
-					<p class="fragment fade-up">Sin embargo, esto no supuso el fin de aplicaciones con una arquitectura errónea o difíciles de
+					<p class="fragment fade-up">Sin embargo, esto no supuso el fin de aplicaciones con una arquitectura
+						errónea o difíciles de
 						mantener</p>
-					<p class="fragment fade-up">Con el fin de combatir esto, <a href="http://cleancoder.com/products">Robert C. Martin</a> propuso 5 principios con el fin de facilitar a los
-						desarrolladores la creación de aplicaciones fáciles de leer y, lo que es más importante, mantenibles
+					<p class="fragment fade-up">Con el fin de combatir esto, <a
+							href="http://cleancoder.com/products">Robert C. Martin</a> propuso 5 principios con el fin
+						de facilitar a los
+						desarrolladores la creación de aplicaciones fáciles de leer y, lo que es más importante,
+						mantenibles
 						a largo plazo</p>
 				</section>
 				<section>
@@ -60,7 +66,7 @@
 			</section>
 			<section>
 				<section data-markdown>
-					##### 	The **_S_**ingle Responsibility Principle (SRP)
+					##### The **_S_**ingle Responsibility Principle (SRP)
 					_"A class should have one, and only one, reason to change"_
 				</section>
 				<section>
@@ -73,21 +79,24 @@
 					<h5>SRP</h5>
 					<p class="fragment fade-up">Este principio es el principal y mas importante</p>
 					<p class="fragment fade-up">Fácil de entender, difícil de poner en práctica</p>
-					<p class="fragment fade-up">Este principio se puede aplicar no solo a Clases sino a microservicios</p>
+					<p class="fragment fade-up">Este principio se puede aplicar no solo a Clases sino a microservicios
+					</p>
 
 				</section>
 				<section>
 					<h5>SRP</h5>
 					<p class="fragment fade-up">Cómo lograrlo según Uncle Bob Martin ? ...</p>
-					<blockquote class="fragment fade-up" cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;Reúne las cosas que cambian por las mismas razones y separa aquellas que cambian por razones diferentes&rdquo;
+					<blockquote class="fragment fade-up"
+						cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						&ldquo;Reúne las cosas que cambian por las mismas razones y separa aquellas que cambian por
+						razones diferentes&rdquo;
 					</blockquote>
 				</section>
 				<section>
 					<h5>SRP</h5>
 					</p>
 					<p class="fragment fade-up"">La siguiente clase viola SRP ? ...</p>
-						<pre class="fragment fade-up"" ><code class="hljs" data-trim data-line-numbers="4|5">
+						<pre class=" fragment fade-up""><code class="hljs" data-trim data-line-numbers="4|5">
 							class Vehiculo {
 								Vehiculo(identificador: string){ }
 								getIdentificadorVehiculo() { }
@@ -104,7 +113,7 @@
 					<h5>SRP</h5>
 					</p>
 					<p class="fragment">Cómo lo solucionamos ? ...</p>
-						<pre class="fragment fade-up" ><code class="hljs" data-trim data-line-numbers="2-3|7-8">
+					<pre class="fragment fade-up"><code class="hljs" data-trim data-line-numbers="2-3|7-8">
 							class Vehiculo {
 								Vehiculo(identificador: string){ }
 								getIdentificadorVehiculo() { }
@@ -118,11 +127,11 @@
 						</pre>
 					</p>
 					<p class="fragment fade-up">... Separamos responsabilidades</p>
-			</section>
+				</section>
 			</section>
 			<section>
 				<section data-markdown>
-					##### 	The *O*pen Closed Principle (OCP)
+					##### The *O*pen Closed Principle (OCP)
 
 
 					_"You should be able to extend a classes behavior, without modifying it"_
@@ -130,23 +139,30 @@
 				<section>
 					<h5>OCP</h5>
 					</p>
-					<p class="fragment fade-up">Deberías ser capaz de extender el comportamiento de una clase, sin modificarla</p>
-					<p class="fragment fade-up">El segundo principio de SOLID lo formuló <a href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a>  en 1988 en su libro <a href="https://en.wikipedia.org/wiki/Object-Oriented_Software_Construction">Object Oriented Software Construction</a></p>
-					<p class="fragment fade-up">Las clases que usas deberían estar abiertas para poder extenderse y cerradas para modificarse</p>
+					<p class="fragment fade-up">Deberías ser capaz de extender el comportamiento de una clase, sin
+						modificarla</p>
+					<p class="fragment fade-up">El segundo principio de SOLID lo formuló <a
+							href="https://en.wikipedia.org/wiki/Bertrand_Meyer">Bertrand Meyer</a> en 1988 en su libro
+						<a href="https://en.wikipedia.org/wiki/Object-Oriented_Software_Construction">Object Oriented
+							Software Construction</a></p>
+					<p class="fragment fade-up">Las clases que usas deberían estar abiertas para poder extenderse y
+						cerradas para modificarse</p>
 
 
 				</section>
 				<section>
 					<h5>OCP</h5>
 					</p>
-					<p class="fragment fade-up"><a href="http://cleancoder.com/products">Robert C. Martin</a> defendió en su <a href="">blog</a> este principio que a priori puede parecer una paradoja</p>
-					<p class="fragment fade-up">Es importante tener en cuenta este principio a la hora de desarrollar clases, librerías o frameworks</p>
+					<p class="fragment fade-up"><a href="http://cleancoder.com/products">Robert C. Martin</a> defendió
+						en su <a href="">blog</a> este principio que a priori puede parecer una paradoja</p>
+					<p class="fragment fade-up">Es importante tener en cuenta este principio a la hora de desarrollar
+						clases, librerías o frameworks</p>
 				</section>
 				<section>
 					<h5>OCP</h5>
 					</p>
 					<p class="fragment fade-up"">Continuamos con la clase Vehiculo ...</p>
-					<pre class="fragment fade-up"" >
+					<pre class=" fragment fade-up"">
 						<code class="hljs" data-trim data-line-numbers="8-14">
 						class Vehiculo {
 							Vehiculo(identificador: string){ }
@@ -154,14 +170,13 @@
 						}	
 
 						</code>
-					</pre>
-					</p>
+						</pre>
 				</section>
 				<section>
 					<h5>OCP</h5>
 					</p>
 					<p class="fragment fade-up"">... Agregamos el método ruedasVehiculos() ...</p>
-					<pre class="fragment fade-up"" >
+					<pre class=" fragment fade-up"">
 						<code class="hljs" data-trim data-line-numbers="3|5|7">
 						static ruedasVehiculos(List<Vehiculo> vehiculos) {
 							for (Vehiculo vehiculo: vehiculos) {
@@ -178,6 +193,7 @@
 					<p class="fragment fade-up">... Violamos OCP?</p>
 					<p class="fragment fade-up">... SI?</p>
 					<p class="fragment fade-up">Si agregamos un tipo de vehiculo, tenemos que cambiar el método <i>ruedasVehiculos</i></p>
+				</section>
 			</section>
 			<section>
 				<section data-markdown>
