@@ -223,13 +223,22 @@
 					</p>
 					<p class="fragment fade-up">Las clases derivadas deben poder sustituirse por sus clases base</p>
 					<p class="fragment fade-up">Este principio fué acuñado por <a href="https://es.wikipedia.org/wiki/Barbara_Liskov">Barbara Liskov</a>
-					<p class="fragment fade-up">Esto significa que los objetos deben poder ser reemplazados por instancias de sus subtipos sin alterar el correcto funcionamiento del sistema</p>
+					<p class="fragment fade-up">Significa que los objetos deben poder ser reemplazados por instancias de sus subtipos sin alterar el correcto funcionamiento del sistema</p>
 				</section>
 				<section>
 					<h5>LSP</h5>
 					</p>
 					<p class="fragment fade-up">O lo que es lo mismo: si en un programa utilizamos cierta clase, deberíamos poder usar cualquiera de sus subclases sin interferir en la funcionalidad del programa</p>
-					<p class="fragment fade-up">Según Robert C. Martin incumplir el Liskov Substitution Principle (LSP) implica violar también el principio de Abierto/Cerrado</p>	
+					<p class="fragment fade-up">Según <a href="http://cleancoder.com/products">Robert C. Martin</a> incumplir el Liskov Substitution Principle (LSP) implica violar también el principio de Abierto/Cerrado</p>	
+				</section>
+				<section>
+					<h5>LSP</h5>
+					</p>
+					<p class="fragment fade-up">Para conseguir que la función cumpla el principio tendremos que cumplir los siguientes requisitos postulados por Steve Fenton:</p>
+					<ul>
+						<li class="fragment fade-up">Si la superclase tiene un método que acepta un parámetro con un supertipo, cada subclase debería aceptar como argumento tanto un supertipo como un subtipo</li>
+						<li class="fragment fade-up">Si la superclase devuelve un supertipo las subclases deberían devolver una superclase o una subclase</li>
+					</ul>
 				</section>
 			</section>
 			<section>
