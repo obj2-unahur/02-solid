@@ -106,6 +106,24 @@
 						<p class="fragment">... SI!</p>
 						<p class="fragment">Tiene mas de una responsabilidad</p>
 				</section>
+				<section>
+					<h5>The <b><i>S</i>ingle Responsibility Principle (SRP)</b></h5>
+					</p>
+					<p class="fragment">Cómo lo solucionamos ? ...</p>
+						<pre class="fragment" ><code class="hljs" data-trim data-line-numbers="2-3|7-8">
+							class Vehiculo {
+								Vehiculo(identificador: string){ }
+								getIdentificadorVehiculo() { }
+							}		
+							
+							class VehiculoDAO {
+								grabarVehiculo(v: Vehicle) { } 
+								obtenerVehiculo(identifier: string): Vehicle { }
+							}
+							</code>
+						</pre>
+					<p class="fragment">... Separamos responsabilidades</p>
+			</section>
 			</section>
 			<section>
 				<section data-markdown>
