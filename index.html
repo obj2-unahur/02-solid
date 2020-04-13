@@ -27,36 +27,35 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-markdown>
-						## Programación con Objetos II
-						### UNAHUR
-			</section>
-			<section data-markdown>
-						## Clase 02
-						### Principios SOLID
+			<section>
+				<h2>Programación con Objetos II</h2>
+				<h3>UNAHUR</h3>
 			</section>
 			<section>
-				<section data-markdown>
-					##### Un poco de historia ...
+				<h2>Clase 02</h2>
+				<h3>Principios SOLID</h3>
+			</section>
+			<section>
+				<section>
+					<h5> Un poco de historia ...</h5>
 
-					* La programación orientada a objetos supuso la aparición de una nueva forma de diseñar aplicaciones
+					<p class="fragment fade-up">La programación orientada a objetos supuso la aparición de una nueva forma de diseñar aplicaciones</p>
 
-					* Habilitó a los desarrolladores la posibilidad de combinar datos con el mismo propósito en una
-					única clase de modo que la funcionalidad común quedaba encapsulada dentro de la aplicación a
-					diferencia de lo que sucede con la programación funcional u otro tipo de paradigmas
+					<p class="fragment fade-up">Habilitó a los desarrolladores la posibilidad de combinar datos con el mismo propósito en una
+						única clase de modo que la funcionalidad común quedaba encapsulada dentro de la aplicación a
+						diferencia de lo que sucede con la programación funcional u otro tipo de paradigmas</p>
 				</section>
-				<section data-markdown>
-					##### Un poco de historia ...
+				<section>
+					<h5> Un poco de historia ...</h5>
 
-					* Sin embargo, esto no supuso el fin de aplicaciones con una arquitectura errónea o difíciles de
-					mantener
-
-					* Con el fin de combatir esto, [Robert C. Martin](http://cleancoder.com/products) propuso 5 principios con el fin de facilitar a los
-					desarrolladores la creación de aplicaciones fáciles de leer y, lo que es más importante, mantenibles
-					a largo plazo
+					<p class="fragment fade-up">Sin embargo, esto no supuso el fin de aplicaciones con una arquitectura errónea o difíciles de
+						mantener</p>
+					<p class="fragment fade-up">Con el fin de combatir esto, [Robert C. Martin](http://cleancoder.com/products) propuso 5 principios con el fin de facilitar a los
+						desarrolladores la creación de aplicaciones fáciles de leer y, lo que es más importante, mantenibles
+						a largo plazo</p>
 				</section>
-				<section data-markdown>
-					##### Un poco de historia
+				<section>
+					<h5> Un poco de historia ...</h5>
 				</section>
 			</section>
 			<section>
@@ -64,54 +63,50 @@
 					##### 	The **_S_**ingle Responsibility Principle (SRP)
 					_"A class should have one, and only one, reason to change"_
 				</section>
-				<section data-markdown>
-					##### 	The **_S_**ingle Responsibility Principle (SRP)
-
-
-					* Una clase tiene que tener una sola razón para cambiar
-					* Para eso necesita tener una sola responsabilidad
-					* Mas reponsabilidades nos generan acoplamientos
-				
-				</section>
-				<section data-markdown>
-					#####	The **_S_**ingle Responsibility Principle (SRP)
-
-
-					* Este principio es el principal y mas importante
-					* Fácil de entender, difícil de poner en práctica
-					* Este principio se puede aplicar no solo a Clases sino a microservicios
-
-				</section>
-				<section data-markdown>
-					#####	The **_S_**ingle Responsibility Principle (SRP)
-					
-
-					Cómo lograrlo según Uncle Bob Martin ?
-
-					_"Reúne las cosas que cambian por las mismas razones y separa aquellas que cambian por razones diferentes"_
+				<section>
+					<h5>SRP</h5>
+					<p class="fragment fade-up">Una clase tiene que tener una sola razón para cambiar</p>
+					<p class="fragment fade-up">Para eso necesita tener una sola responsabilidad</p>
+					<p class="fragment fade-up">Mas reponsabilidades nos generan acoplamientos</p>
 				</section>
 				<section>
-						<h5>The <b><i>S</i>ingle Responsibility Principle (SRP)</b></h5>
-						</p>
-						<p class="fragment">La siguiente clase viola SRP ? ...</p>
-							<pre class="fragment" ><code class="hljs" data-trim data-line-numbers="4|5">
-								class Vehiculo {
-									Vehiculo(identificador: string){ }
-									getIdentificadorVehiculo() { }
-									grabarVehiculo(v: Vehicle) { } 
-									obtenerVehiculo(identifier: string): Vehicle { }
-								}									
-								</code>
-							</pre>
-						</p>
-						<p class="fragment">... SI!</p>
-						<p class="fragment">Tiene mas de una responsabilidad</p>
+					<h5>SRP</h5>
+					<p class="fragment fade-up">Este principio es el principal y mas importante</p>
+					<p class="fragment fade-up">Fácil de entender, difícil de poner en práctica</p>
+					<p class="fragment fade-up">Este principio se puede aplicar no solo a Clases sino a microservicios</p>
+
 				</section>
 				<section>
-					<h5>The <b><i>S</i>ingle Responsibility Principle (SRP)</b></h5>
+					<h5>SRP</h5>
+					<p class="fragment fade-up">Cómo lograrlo según Uncle Bob Martin ? ...</p>
+					<p class="fragment fade-up">
+						<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+							&ldquo;Reúne las cosas que cambian por las mismas razones y separa aquellas que cambian por razones diferentes&rdquo;
+						</blockquote>
+						</p>
+				</section>
+				<section>
+					<h5>SRP</h5>
+					</p>
+					<p class="fragment fade-up"">La siguiente clase viola SRP ? ...</p>
+						<pre class="fragment fade-up"" ><code class="hljs" data-trim data-line-numbers="4|5">
+							class Vehiculo {
+								Vehiculo(identificador: string){ }
+								getIdentificadorVehiculo() { }
+								grabarVehiculo(v: Vehicle) { } 
+								obtenerVehiculo(identifier: string): Vehicle { }
+							}									
+							</code>
+						</pre>
+					</p>
+					<p class="fragment fade-up">... SI!</p>
+					<p class="fragment fade-up">Tiene mas de una responsabilidad</p>
+				</section>
+				<section>
+					<h5>SRP</h5>
 					</p>
 					<p class="fragment">Cómo lo solucionamos ? ...</p>
-						<pre class="fragment" ><code class="hljs" data-trim data-line-numbers="2-3|7-8">
+						<pre class="fragment fade-up" ><code class="hljs" data-trim data-line-numbers="2-3|7-8">
 							class Vehiculo {
 								Vehiculo(identificador: string){ }
 								getIdentificadorVehiculo() { }
@@ -124,7 +119,7 @@
 							</code>
 						</pre>
 					</p>
-					<p class="fragment">... Separamos responsabilidades</p>
+					<p class="fragment fade-up">... Separamos responsabilidades</p>
 			</section>
 			</section>
 			<section>
@@ -139,7 +134,7 @@
 					</p>
 					<p class="fragment fade-up">Deberías ser capaz de extender el comportamiento de una clase, sin modificarla</p>
 					<p class="fragment fade-up">El segundo principio de SOLID lo formuló Bertrand Meyer en 1988 en su libro “Object Oriented Software Construction”</p>
-					<p class="fragment fade-up">las clases que usas deberían estar abiertas para poder extenderse y cerradas para modificarse</p>
+					<p class="fragment fade-up">Las clases que usas deberían estar abiertas para poder extenderse y cerradas para modificarse</p>
 
 
 				</section>
