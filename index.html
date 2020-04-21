@@ -253,6 +253,83 @@
 						<li class="fragment fade-up">Si la superclase devuelve un supertipo las subclases deberían devolver una superclase o una subclase</li>
 					</ul>
 				</section>
+				<section>
+					<h5>LSP</h5>
+					</p>
+					<p class="fragment fade-up">Continuamos con la clase Vehiculo ...</p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim data-trim data-line-numbers="4|8|12">
+							abtract class Vehiculo {
+								Vehiculo(identificador: String){ }
+								String getIdentificador() { };
+								abstract int cantidadRuedas();
+								abstract void acelerar();
+							}		
+							class Bicicleta extends Vehiculo {
+								int cantidadRuedas() { return 2;}
+								void acelerar() {};
+							}
+							class Triciclo extends Vehiculo {
+								int cantidadRuedas() { return 3;}
+								void acelerar() {};
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h5>LSP</h5>
+					</p>
+					<p class="fragment fade-up">Auto necesita verificar si tiene combustible, antes de acelerar ...</p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="2|3">
+							class Auto extends Vehiculo {
+								int cantidadRuedas() { return 4;}
+								void acelerar(){};
+								boolean tieneCombustible(){};
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h5>LSP</h5>
+					</p>
+					<p class="fragment fade-up">Necesito conocer el tipo de Vehiculo ...</p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim data-trim data-line-numbers="1-4">
+							void acelerarVehiculo(Vehiculo vehiculo) {
+								if (vehiculo instaceOf Auto) {
+									Auto auto = (Auto) vehiculo;
+									if (auto.tieneCombustible()) {
+										auto.acelerar();
+									} else {
+										vehiculo.acelerar();
+									}
+								}
+							}
+						</code>
+					</pre>
+					<p><span class="fragment fade-up">... Violamos LSP?</span> <span class="fragment fade-up ">... SI!</span><span class="fragment fade-up"> ... porque necesitamos conocer el tipo de vehiculo</span></p>
+				</section>
+				<section>
+					<h5>LSP</h5>
+					</p>
+					<p class="fragment fade-up">Cómo lo solucionamos ? ...</p>
+					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="2|4|6">
+						class Auto extends Vehiculo {
+							int cantidadRuedas() { return 4;}
+							void acelerar(){ 
+								if (tieneCombustible()) {
+									//acelero
+								}
+							};
+							boolean tieneCombustible(){};
+						}
+
+						void acelerarVehiculo(Vehiculo vehiculo) {
+							vehiculo.acelerar();
+						}
+					</code></pre>
+				</section>
 			</section>
 			<section>
 				<section data-markdown>
