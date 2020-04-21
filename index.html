@@ -39,7 +39,7 @@
 				<section>
 					<h5>Introducción</h5>
 					</p>
-					<p class="fragment fade-up">Si hablamos de diseño y desarrollo de aplicaciones, SOLID es una palabra que debes conocer como uno de los fundamentos de la arquitectura y desarrollo de software</p>
+					<p class="fragment fade-up">Si hablamos de diseño y desarrollo de aplicaciones, SOLID es una palabra que debes conocer Cómo uno de los fundamentos de la arquitectura y desarrollo de software</p>
 					<p class="fragment fade-up">SOLID es el acrónimo que acuñó Michael Feathers, basándose en los principios de la programación orientada a objetos que Robert C. Martin había recopilado en el año 2000 en su paper “Design Principles and Design Patterns”</p>
 				</section>
 				<section>
@@ -249,7 +249,7 @@
 					</p>
 					<p class="fragment fade-up">Para cumplir con el principio tendremos que seguir con postulados de <a href="https://www.stevefenton.co.uk/">Steve Fenton</a></p>
 					<ul>
-						<li class="fragment fade-up">Si la superclase tiene un método que acepta un parámetro con un supertipo, cada subclase debería aceptar como argumento tanto un supertipo como un subtipo</li>
+						<li class="fragment fade-up">Si la superclase tiene un método que acepta un parámetro con un supertipo, cada subclase debería aceptar Cómo argumento tanto un supertipo Cómo un subtipo</li>
 						<li class="fragment fade-up">Si la superclase devuelve un supertipo las subclases deberían devolver una superclase o una subclase</li>
 					</ul>
 				</section>
@@ -437,7 +437,7 @@
 				<section>
 					<h5>DIP</h5>
 					</p>
-					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
+					<p class="fragment fade-up">Tenemos las siguientes clases ...</p>
 					<pre class=" fragment fade-up">
 						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="5-7|10">
 							class DatabaseService{  
@@ -455,11 +455,12 @@
 							}
 						</code>
 					</pre>
+					<p><span class="fragment fade-up">Que pasa si queremos leer los datos de un API en lugar de la BD? ... </span> <span class="fragment fade-up ">Tenemos que tocar la clase porque cambia la implementación! ... </span><span class="fragment fade-up">porque estamos violando DIP</span></p>
 				</section>
 				<section>
 					<h5>DIP</h5>
 					</p>
-					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
+					<p class="fragment fade-up">Cómo lo solucionamos ...</p>
 					<pre class=" fragment fade-up">
 						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="1|2-3|6|7-8|11">
 							interface Conexion {  
@@ -477,11 +478,12 @@
 							}
 						</code>
 					</pre>
+					<p><span class="fragment fade-up">Modelamos la depencia como una abstracción (Interfaz en Java) ... </span> <span class="fragment fade-up ">No dependemos de una implementación concreta</span></p>
 				</section>
 				<section>
 					<h5>DIP</h5>
 					</p>
-					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
+					<p class="fragment fade-up">... Cómo lo solucionamos</p>
 					<pre class=" fragment fade-up">
 						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="1|5">
 							class DatabaseService implements Conexion {
@@ -501,7 +503,7 @@
 					<h5>Conclusiones</h5>
 					</p>
 					<p>Los principios SOLID son eso: principios, es decir, buenas prácticas que pueden ayudar a escribir un mejor código: más limpio, mantenible y escalable</p>
-					<p>Como indica el propio Robert C. Martin en su artículo <a href="https://sites.google.com/site/unclebobconsultingllc/getting-a-solid-start">“Getting a SOLID start”</a> no se trata de reglas, ni leyes, ni verdades absolutas, sino más bien soluciones de sentido común a problemas comunes</p>
+					<p>Cómo indica el propio Robert C. Martin en su artículo <a href="https://sites.google.com/site/unclebobconsultingllc/getting-a-solid-start">“Getting a SOLID start”</a> no se trata de reglas, ni leyes, ni verdades absolutas, sino más bien soluciones de sentido común a problemas comunes</p>
 				</section>
 				<section data-markdown>
 					<h5>Conclusiones</h5>
