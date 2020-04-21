@@ -381,41 +381,45 @@
 					<h5>LSP</h5>
 					</p>
 					<p class="fragment fade-up">Cómo lo solucionamos ? ...</p>
-					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="2|5|9">
-						interface Ave {  
-							void comer();
-						}
-						interface AveVoladora {  
-							void volar();
-						}
-						interface AveNadadora {  
-							void nadar();
-						}
-					</code></pre>
+					<pre class=" fragment fade-up"> 
+						<code class="hljs" data-trim data-line-numbers="2|5|9">
+							interface Ave {  
+								void comer();
+							}
+							interface AveVoladora {  
+								void volar();
+							}
+							interface AveNadadora {  
+								void nadar();
+							}
+						</code>
+					</pre>
 				</section>
 				<section>
 					<h5>LSP</h5>
 					</p>
-					<p class="fragment fade-up">... Cómo lo solucionamos ?p>
-					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="2|3|6|7|11|12">
-						class Loro implements Ave, AveVoladora {
-							public void comer() {}
-							public void volar() {}
-						}
-						class Tucan implements Ave, AveVoladora {  
-							public void comer() {}
-							public void volar() {}
-						}
-						class Pinguino implements Ave, AveNadadora {  
-							public void comer() {}
-							public void nadar() {}
-						}
-					</code></pre>
+					<p class="fragment fade-up">... Cómo lo solucionamos ?<p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim data-line-numbers="2|3|6|7|11|12">
+							class Loro implements Ave, AveVoladora {
+								public void comer() {}
+								public void volar() {}
+							}
+							class Tucan implements Ave, AveVoladora {  
+								public void comer() {}
+								public void volar() {}
+							}
+							class Pinguino implements Ave, AveNadadora {  
+								public void comer() {}
+								public void nadar() {}
+							}
+						</code>
+				</pre>
 				</section>
 			</section>
 			<section>
 				<section data-markdown>
-					##### 	The *D*ependency Inversion Principle
+					##### 	The *D*ependency Inversion Principle (DIP)
 					_"Depend on abstractions, not on concretions"_
 				</section>
 				<section>
@@ -429,6 +433,67 @@
 					</p>					
 					<p class="fragment fade-up">Las abstracciones no deberían depender de los detalles. Los detalles deberían depender de las abstracciones</p>
 					<p class="fragment fade-up">El objetivo de DIP consiste en reducir las dependencias entre los módulos del código, es decir, alcanzar un bajo acoplamiento de las clases</p>
+				</section>
+				<section>
+					<h5>DIP</h5>
+					</p>
+					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="5-7|10">
+							class DatabaseService{  
+								void getDatos(){ //... }
+							}
+							class AccesoADatos {
+								private DatabaseService databaseService;
+								public AccesoADatos(DatabaseService databaseService){
+									this.databaseService = databaseService;
+								}
+								Dato getDatos(){
+									databaseService.getDatos();
+									//...
+								}
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h5>DIP</h5>
+					</p>
+					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="1|2-3|6|7-8|11">
+							interface Conexion {  
+								Dato getDatos();
+								void setDatos();
+							}
+							class AccesoADatos {
+								private Conexion conexion;
+								public AccesoADatos(Conexion conexion){
+									this.conexion = conexion;
+								}
+								Dato getDatos(){
+									conexion.getDatos();
+								}
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h5>DIP</h5>
+					</p>
+					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
+					<pre class=" fragment fade-up">
+						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="1|5">
+							class DatabaseService implements Conexion {
+								public Dato getDatos() { //... }
+								public void setDatos() { //... }
+							}
+							class APIService implements Conexion{
+								public Dato getDatos() { //... }
+								public void setDatos() { //... }
+							}
+						</code>
+					</pre>
 				</section>
 			</section>
 			<section>
