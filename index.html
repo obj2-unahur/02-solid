@@ -258,7 +258,7 @@
 					</p>
 					<p class="fragment fade-up">Continuamos con la clase Vehiculo ...</p>
 					<pre class=" fragment fade-up">
-						<code class="hljs" data-trim data-trim data-line-numbers="4|8|12">
+						<code class="hljs" data-trim data-trim data-line-numbers="5|9|13">
 							abtract class Vehiculo {
 								Vehiculo(identificador: String){ }
 								String getIdentificador() { };
@@ -281,7 +281,7 @@
 					</p>
 					<p class="fragment fade-up">Auto necesita verificar si tiene combustible, antes de acelerar ...</p>
 					<pre class=" fragment fade-up">
-						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="2|3">
+						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="3|4">
 							class Auto extends Vehiculo {
 								int cantidadRuedas() { return 4;}
 								void acelerar(){};
@@ -295,7 +295,7 @@
 					</p>
 					<p class="fragment fade-up">Necesito conocer el tipo de Vehiculo ...</p>
 					<pre class=" fragment fade-up">
-						<code class="hljs" data-trim data-trim data-line-numbers="1-4">
+						<code class="hljs" data-trim data-trim data-line-numbers="2-5">
 							void acelerarVehiculo(Vehiculo vehiculo) {
 								if (vehiculo instaceOf Auto) {
 									Auto auto = (Auto) vehiculo;
@@ -324,7 +324,6 @@
 							};
 							boolean tieneCombustible(){};
 						}
-
 						void acelerarVehiculo(Vehiculo vehiculo) {
 							vehiculo.acelerar();
 						}
@@ -347,17 +346,15 @@
 					</p>
 					<p class="fragment fade-up">Modelamos los tipos de Aves ...</p>
 					<pre class=" fragment fade-up">
-						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="1|2">
+						<code class="hljs" data-trim  data-trim data-trim data-line-numbers="2|3">
 							interface Ave {  
 								void volar();
 								void comer();
 							}
-							
 							class Loro implements Ave {
 								public void volar() {}
 								public void comer() {}
 							}
-							
 							class Tucan implements Ave {  
 								public void volar() {}
 								public void comer() {}
@@ -378,13 +375,13 @@
 							}
 						</code>
 					</pre>
-					<p><span class="fragment fade-up">... De esta forma Obligo a Pinguino a implementar un comportamiento q no tiene</span> <span class="fragment fade-up ">... y a las otras aves tambien !</span><span class="fragment fade-up">... porque estamos violando ISP</span></p>
+					<p><span class="fragment fade-up">De esta forma Obligo a Pinguino a implementar un comportamiento q no tiene ...</span> <span class="fragment fade-up ">y a las otras aves tambien ! ...</span><span class="fragment fade-up">porque estamos violando ISP</span></p>
 				</section>
 				<section>
 					<h5>LSP</h5>
 					</p>
 					<p class="fragment fade-up">Cómo lo solucionamos ? ...</p>
-					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="1|4|8">
+					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="2|5|9">
 						interface Ave {  
 							void comer();
 						}
@@ -400,7 +397,7 @@
 					<h5>LSP</h5>
 					</p>
 					<p class="fragment fade-up">... Cómo lo solucionamos ?p>
-					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="1|2|5|6|10|11">
+					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="2|3|6|7|11|12">
 						class Loro implements Ave, AveVoladora {
 							public void comer() {}
 							public void volar() {}
