@@ -111,10 +111,10 @@
 					<p class="fragment fade-up"">La siguiente clase viola SRP ? ...</p>
 						<pre class=" fragment fade-up""><code class="hljs" data-trim data-line-numbers="4|5">
 							class Vehiculo {
-								Vehiculo(identificador: String){ }
+								Vehiculo(String indentificador){ }
 								String getIdentificador() { }
-								void grabarVehiculo(v: Vehicle) { } 
-								void obtenerVehiculo(identifier: String): Vehicle { }
+								void grabarVehiculo(Vehiculo v) { } 
+								Vehicle obtenerVehiculo(String identifier)  { }
 							}									
 							</code>
 						</pre>
@@ -496,6 +496,7 @@
 							}
 						</code>
 					</pre>
+					<p><span class="fragment fade-up">Puedo tener multiples implementaciones de Conexion ... </span> <span class="fragment fade-up ">E intercambiar su uso sin tocar la clase AccesoADatos</span></p>
 				</section>
 			</section>
 			<section>
