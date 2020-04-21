@@ -368,9 +368,9 @@
 				<section>
 					<h5>ISP</h5>
 					</p>
-					<p><span class="fragment fade-up">Queremos incorporar los Pinguinos ... </span> <span class="fragment fade-up ">... que nadan ...</span><span class="fragment fade-up"> ... pero no vuelan</span></p>
+					<p><span class="fragment fade-up">Queremos incorporar los Pinguinos ... </span> <span class="fragment fade-up ">que nadan ...</span><span class="fragment fade-up">pero no vuelan</span></p>
 					<pre class=" fragment fade-up">
-						<code class="hljs" data-trim data-trim data-line-numbers="3|4|7|9">
+						<code class="hljs" data-trim data-trim data-line-numbers="1-3">
 							interface Ave {  
 								void volar();
 								void comer();
@@ -378,21 +378,19 @@
 							}
 						</code>
 					</pre>
-					<p><span class="fragment fade-up">... De esta forma Obligo a Pinguino a implementar un comportamiento q no tiene ... </span> <span class="fragment fade-up ">... Obliga a las otras aves tambien !</span><span class="fragment fade-up"> ... porque estamos violando ISP</span></p>
+					<p><span class="fragment fade-up">... De esta forma Obligo a Pinguino a implementar un comportamiento q no tiene</span> <span class="fragment fade-up ">... y a las otras aves tambien !</span><span class="fragment fade-up">... porque estamos violando ISP</span></p>
 				</section>
 				<section>
 					<h5>LSP</h5>
 					</p>
 					<p class="fragment fade-up">Cómo lo solucionamos ? ...</p>
-					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="1|5|9">
+					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="1|4|8">
 						interface Ave {  
 							void comer();
 						}
-
 						interface AveVoladora {  
 							void volar();
 						}
-						
 						interface AveNadadora {  
 							void nadar();
 						}
@@ -402,17 +400,15 @@
 					<h5>LSP</h5>
 					</p>
 					<p class="fragment fade-up">... Cómo lo solucionamos ?p>
-					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="1|2|6|7|11|12">
+					<pre class=" fragment fade-up"> <code class="hljs" data-trim data-line-numbers="1|2|5|6|10|11">
 						class Loro implements Ave, AveVoladora {
 							public void comer() {}
 							public void volar() {}
 						}
-						
 						class Tucan implements Ave, AveVoladora {  
 							public void comer() {}
 							public void volar() {}
 						}
-						
 						class Pinguino implements Ave, AveNadadora {  
 							public void comer() {}
 							public void nadar() {}
