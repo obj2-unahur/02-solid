@@ -368,7 +368,7 @@
 				<section>
 					<h5>ISP</h5>
 					</p>
-					<p class="fragment fade-up">Incorporamos al modelo los Pinguinos, que nadan pero no vuelan ...</p>
+					<p><span class="fragment fade-up">Queremos incorporar los Pinguinos ... </span> <span class="fragment fade-up ">... que nadan ...</span><span class="fragment fade-up"> ... pero no vuelan</span></p>
 					<pre class=" fragment fade-up">
 						<code class="hljs" data-trim data-trim data-line-numbers="3|4|7|9">
 							interface Ave {  
@@ -376,15 +376,9 @@
 								void comer();
 								void nadar();
 							}
-
-							class Pinguino implements Ave {  
-								public void volar() {}
-								public void comer() {}
-								public void nadar() {}
-							}
 						</code>
 					</pre>
-					<p><span class="fragment fade-up">... Obligo a Pinguino a implementar un comportamiento q no tiene ... </span> <span class="fragment fade-up ">... Obliga a las otras aves tambien !</span><span class="fragment fade-up"> ... porque estamos violando ISP</span></p>
+					<p><span class="fragment fade-up">... De esta forma Obligo a Pinguino a implementar un comportamiento q no tiene ... </span> <span class="fragment fade-up ">... Obliga a las otras aves tambien !</span><span class="fragment fade-up"> ... porque estamos violando ISP</span></p>
 				</section>
 				<section>
 					<h5>LSP</h5>
